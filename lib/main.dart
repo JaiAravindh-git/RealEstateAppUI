@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
                         child: Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 0, 100, 0),
+                          padding: const EdgeInsets.fromLTRB(30, 0, 100, 0),
                           child: Container(
                             height: 300.0,
                             width: 300.0,
@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(30, 300, 0, 0),
+                          padding: const EdgeInsets.fromLTRB(30, 230, 0, 0),
                           child: Row(
                             children: [
                               Icon(Icons.ac_unit_outlined),
@@ -99,7 +99,9 @@ class HomePage extends StatelessWidget {
                           child: Row(
                             children: [
                               FlatButton(
-                                color: Colors.grey[200],
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0)),
+                                color: Colors.pink[200],
                                 child: Text("I have interested Clients"),
                                 onPressed: () {},
                               ),
@@ -107,7 +109,9 @@ class HomePage extends StatelessWidget {
                                 width: 10.0,
                               ),
                               FlatButton(
-                                color: Colors.grey[200],
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0)),
+                                color: Colors.pink[200],
                                 child: Row(
                                   children: [
                                     Icon(Icons.ios_share),
@@ -122,14 +126,29 @@ class HomePage extends StatelessWidget {
                       ],
                     )),
                     Container(
-                      child: Column(
-                        children: [
-                          Icon(Icons.access_alarm),
-                          Icon(Icons.access_alarm),
-                          Icon(Icons.access_alarm),
-                          Icon(Icons.access_alarm),
-                          Icon(Icons.access_alarm),
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 50, 30, 0),
+                        child: Column(
+                          children: [
+                            Icon(Icons.location_city_outlined),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Icon(Icons.photo_sharp),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Icon(Icons.video_call),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Icon(Icons.maps_ugc_outlined),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Icon(Icons.money_outlined),
+                          ],
+                        ),
                       ),
                     ),
                   ],
