@@ -17,6 +17,22 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text('Home'),
+              backgroundColor: Colors.blue),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text('Home'),
+              backgroundColor: Colors.blue),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text('Home'),
+              backgroundColor: Colors.blue),
+        ],
+      ),
       body: PageView(
         scrollDirection: Axis.vertical,
         children: [
