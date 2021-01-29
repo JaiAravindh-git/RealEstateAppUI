@@ -60,7 +60,8 @@ class HomePage extends StatelessWidget {
                               Icon(Icons.ac_unit_outlined),
                               Text(
                                 "Shriram properties",
-                                style: TextStyle(fontSize: 30.0),
+                                style: TextStyle(
+                                    fontSize: 30.0, fontFamily: 'Roboto'),
                               ),
                             ],
                           ),
@@ -72,12 +73,17 @@ class HomePage extends StatelessWidget {
                             children: [
                               Text(
                                 "Shriram Park 63",
-                                style: TextStyle(fontSize: 20.0),
+                                style: TextStyle(
+                                    fontSize: 20.0, fontFamily: 'Roboto'),
                               ),
-                              Text("Perungulathur, Chennai"),
+                              Text(
+                                "Perungulathur, Chennai",
+                                style: TextStyle(fontFamily: 'Roboto'),
+                              ),
                               Text(
                                 "29.30L- 79.79L",
-                                style: TextStyle(fontSize: 15.0),
+                                style: TextStyle(
+                                    fontSize: 15.0, fontFamily: 'Roboto'),
                               ),
                             ],
                           ),
@@ -87,10 +93,18 @@ class HomePage extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
-                              Text("• Well Planned integrated townShip"),
-                              Text("• 20 mins drive to airport"),
                               Text(
-                                  "• Right opposite to Perungulathur railway station"),
+                                "• Well Planned integrated townShip",
+                                style: TextStyle(fontFamily: 'Roboto'),
+                              ),
+                              Text(
+                                "• 20 mins drive to airport",
+                                style: TextStyle(fontFamily: 'Roboto'),
+                              ),
+                              Text(
+                                "• Right opposite to Perungulathur railway station",
+                                style: TextStyle(fontFamily: 'Roboto'),
+                              ),
                             ],
                           ),
                         ),
@@ -102,7 +116,10 @@ class HomePage extends StatelessWidget {
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(18.0)),
                                 color: Colors.pink[200],
-                                child: Text("I have interested Clients"),
+                                child: Text(
+                                  "I have interested Clients",
+                                  style: TextStyle(fontFamily: 'Roboto'),
+                                ),
                                 onPressed: () {},
                               ),
                               SizedBox(
@@ -115,7 +132,10 @@ class HomePage extends StatelessWidget {
                                 child: Row(
                                   children: [
                                     Icon(Icons.ios_share),
-                                    Text("Share"),
+                                    Text(
+                                      "Share",
+                                      style: TextStyle(fontFamily: 'Roboto'),
+                                    ),
                                   ],
                                 ),
                                 onPressed: () {},
