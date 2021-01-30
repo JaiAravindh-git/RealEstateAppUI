@@ -143,6 +143,54 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                         ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(30, 40, 0, 0),
+                          child: Container(
+                            height: 40.0,
+                            width: 300.0,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12.0),
+                              color: Colors.blue[100],
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Row(
+                                  children: [
+                                    Icon(Icons.badge),
+                                    Container(
+                                      child: Text("Exclusive"),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  child: Text(" | "),
+                                  width: 20.0,
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(Icons.location_city),
+                                    Container(
+                                      child: Text("Chennai"),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  child: Text(" | "),
+                                  width: 20.0,
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(Icons.filter_sharp),
+                                    Container(
+                                      child: Text("Filters"),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     )),
                     Container(
