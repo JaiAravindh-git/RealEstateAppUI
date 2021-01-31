@@ -55,36 +55,43 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(30, 230, 0, 0),
+                          padding: const EdgeInsets.fromLTRB(30, 100, 0, 0),
                           child: Row(
                             children: [
                               Icon(Icons.ac_unit_outlined),
                               Text(
                                 "Shriram properties",
                                 style: TextStyle(
-                                    fontSize: 30.0, fontFamily: 'Roboto'),
+                                    fontSize: 40.0, fontFamily: 'Roboto'),
                               ),
                             ],
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(70, 0, 0, 0),
+                          padding: const EdgeInsets.fromLTRB(70, 5, 0, 0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
                               Text(
                                 "Shriram Park 63",
                                 style: TextStyle(
-                                    fontSize: 20.0, fontFamily: 'Roboto'),
+                                    fontSize: 30.0, fontFamily: 'Roboto'),
+                              ),
+                              SizedBox(
+                                height: 5.0,
                               ),
                               Text(
                                 "Perungulathur, Chennai",
-                                style: TextStyle(fontFamily: 'Roboto'),
+                                style: TextStyle(
+                                    fontFamily: 'Roboto', fontSize: 15.0),
+                              ),
+                              SizedBox(
+                                height: 5.0,
                               ),
                               Text(
                                 "29.30L- 79.79L",
                                 style: TextStyle(
-                                    fontSize: 15.0, fontFamily: 'Roboto'),
+                                    fontSize: 30.0, fontFamily: 'Roboto'),
                               ),
                             ],
                           ),
@@ -94,17 +101,29 @@ class HomePage extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
+                              SizedBox(
+                                height: 5.0,
+                              ),
                               Text(
                                 "• Well Planned integrated townShip",
-                                style: TextStyle(fontFamily: 'Roboto'),
+                                style: TextStyle(
+                                    fontFamily: 'Roboto', fontSize: 15.0),
+                              ),
+                              SizedBox(
+                                height: 5.0,
                               ),
                               Text(
                                 "• 20 mins drive to airport",
-                                style: TextStyle(fontFamily: 'Roboto'),
+                                style: TextStyle(
+                                    fontFamily: 'Roboto', fontSize: 15.0),
+                              ),
+                              SizedBox(
+                                height: 5.0,
                               ),
                               Text(
                                 "• Right opposite to Perungulathur railway station",
-                                style: TextStyle(fontFamily: 'Roboto'),
+                                style: TextStyle(
+                                    fontFamily: 'Roboto', fontSize: 15.0),
                               ),
                             ],
                           ),
@@ -151,7 +170,7 @@ class HomePage extends StatelessWidget {
                             width: 300.0,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12.0),
-                              color: Colors.blue[100],
+                              color: Colors.blue.withOpacity(0.3),
                             ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
