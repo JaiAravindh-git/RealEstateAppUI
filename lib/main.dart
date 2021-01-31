@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
+      backgroundColor: Colors.grey[50],
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
@@ -179,10 +179,10 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(30, 40, 0, 0),
+                          padding: const EdgeInsets.fromLTRB(40, 40, 0, 0),
                           child: Container(
-                            height: 40.0,
-                            width: 300.0,
+                            height: 50.0,
+                            width: 310.0,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12.0),
                               color: Colors.blue.withOpacity(0.3),
@@ -194,31 +194,46 @@ class HomePage extends StatelessWidget {
                                   children: [
                                     Icon(Icons.badge),
                                     Container(
-                                      child: Text("Exclusive"),
+                                      child: Text(
+                                        "Exclusive",
+                                        style: TextStyle(fontSize: 17.0),
+                                      ),
                                     ),
                                   ],
                                 ),
                                 SizedBox(
-                                  child: Text(" | "),
+                                  child: Text(
+                                    " | ",
+                                    style: TextStyle(fontSize: 17.0),
+                                  ),
                                   width: 20.0,
                                 ),
                                 Row(
                                   children: [
                                     Icon(Icons.location_city),
                                     Container(
-                                      child: Text("Chennai"),
+                                      child: Text(
+                                        "Chennai",
+                                        style: TextStyle(fontSize: 17.0),
+                                      ),
                                     ),
                                   ],
                                 ),
                                 SizedBox(
-                                  child: Text(" | "),
+                                  child: Text(
+                                    " | ",
+                                    style: TextStyle(fontSize: 17.0),
+                                  ),
                                   width: 20.0,
                                 ),
                                 Row(
                                   children: [
                                     Icon(Icons.filter_sharp),
                                     Container(
-                                      child: Text("Filters"),
+                                      child: Text(
+                                        "Filters",
+                                        style: TextStyle(fontSize: 17.0),
+                                      ),
                                     ),
                                   ],
                                 ),
