@@ -97,7 +97,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(90, 0, 0, 0),
+                          padding: const EdgeInsets.fromLTRB(90, 5, 0, 0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
@@ -129,36 +129,51 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(80, 20, 20, 0),
+                          padding: const EdgeInsets.fromLTRB(60, 40, 20, 0),
                           child: Row(
                             children: [
-                              FlatButton(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18.0)),
-                                color: Colors.pink[200],
-                                child: Text(
-                                  "I have interested Clients",
-                                  style: TextStyle(fontFamily: 'Roboto'),
+                              Container(
+                                height: 40.0,
+                                width: 200.0,
+                                child: FlatButton(
+                                  textColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(18.0)),
+                                  color: Colors.pink[200],
+                                  child: Text(
+                                    "I have interested Clients",
+                                    style: TextStyle(
+                                        fontFamily: 'Roboto', fontSize: 17.0),
+                                  ),
+                                  onPressed: () {},
                                 ),
-                                onPressed: () {},
                               ),
                               SizedBox(
                                 width: 10.0,
                               ),
-                              FlatButton(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18.0)),
-                                color: Colors.pink[200],
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.ios_share),
-                                    Text(
-                                      "Share",
-                                      style: TextStyle(fontFamily: 'Roboto'),
-                                    ),
-                                  ],
+                              Container(
+                                height: 40.0,
+                                width: 96.0,
+                                child: FlatButton(
+                                  textColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(18.0)),
+                                  color: Colors.pink[200],
+                                  child: Row(
+                                    children: [
+                                      Icon(Icons.ios_share),
+                                      Text(
+                                        "Share",
+                                        style: TextStyle(
+                                            fontFamily: 'Roboto',
+                                            fontSize: 17.0),
+                                      ),
+                                    ],
+                                  ),
+                                  onPressed: () {},
                                 ),
-                                onPressed: () {},
                               )
                             ],
                           ),
