@@ -26,16 +26,24 @@ class HomePage extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.home_outlined),
               title: Text('Home'),
               backgroundColor: Colors.blue),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Text('Home'),
+              icon: Icon(Icons.list_alt_rounded),
+              title: Text('Listings'),
               backgroundColor: Colors.blue),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Text('Home'),
+              icon: Icon(Icons.apartment),
+              title: Text('Projects'),
+              backgroundColor: Colors.blue),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.people),
+              title: Text('Realtors'),
+              backgroundColor: Colors.blue),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.dynamic_feed_rounded),
+              title: Text('Listings'),
               backgroundColor: Colors.blue),
         ],
       ),
