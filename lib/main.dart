@@ -276,22 +276,15 @@ class NewWidget extends StatelessWidget {
                     child: Column(
                       children: [
                         Icon(Icons.location_city_outlined),
-                        SizedBox(
-                          height: 10.0,
-                        ),
+                        Text("Building", style: TextStyle(fontSize: 6.0)),
                         Icon(Icons.photo_sharp),
-                        SizedBox(
-                          height: 10.0,
-                        ),
+                        Text("Gallery", style: TextStyle(fontSize: 6.0)),
                         Icon(Icons.video_call),
-                        SizedBox(
-                          height: 10.0,
-                        ),
+                        Text("Video Call", style: TextStyle(fontSize: 6.0)),
                         Icon(Icons.maps_ugc_outlined),
-                        SizedBox(
-                          height: 10.0,
-                        ),
+                        Text("Mesage", style: TextStyle(fontSize: 6.0)),
                         Icon(Icons.money_outlined),
+                        Text("Properties", style: TextStyle(fontSize: 6.0)),
                       ],
                     ),
                   ),
