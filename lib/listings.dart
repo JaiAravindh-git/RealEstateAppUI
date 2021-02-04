@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nice_button/nice_button.dart';
 
 class Listings extends StatelessWidget {
   Listings(
@@ -8,6 +9,7 @@ class Listings extends StatelessWidget {
   String propertyname;
   String location;
   String cost;
+  var firstColor = Color(0xff5b86e5), secondColor = Color(0xff36d1dc);
 
   @override
   Widget build(BuildContext context) {
@@ -107,18 +109,12 @@ class Listings extends StatelessWidget {
                       child: Row(
                         children: [
                           Container(
-                            height: 40.0,
+                            height: 50.0,
                             width: 200.0,
-                            child: FlatButton(
-                              textColor: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(18.0)),
-                              color: Colors.pink[200],
-                              child: Text(
-                                "I have interested Clients",
-                                style: TextStyle(
-                                    fontFamily: 'Roboto', fontSize: 17.0),
-                              ),
+                            child: NiceButton(
+                              radius: 30.0,
+                              text: 'Clients',
+                              gradientColors: [secondColor, firstColor],
                               onPressed: () {},
                             ),
                           ),
@@ -126,23 +122,14 @@ class Listings extends StatelessWidget {
                             width: 10.0,
                           ),
                           Container(
-                            height: 40.0,
+                            height: 50.0,
                             width: 96.0,
-                            child: FlatButton(
-                              textColor: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(18.0)),
-                              color: Colors.pink[200],
-                              child: Row(
-                                children: [
-                                  Icon(Icons.ios_share),
-                                  Text(
-                                    "Share",
-                                    style: TextStyle(
-                                        fontFamily: 'Roboto', fontSize: 17.0),
-                                  ),
-                                ],
-                              ),
+                            child: NiceButton(
+                              elevation: 5,
+                              radius: 30.0,
+                              mini: true,
+                              icon: Icons.share_sharp,
+                              gradientColors: [secondColor, firstColor],
                               onPressed: () {},
                             ),
                           )
