@@ -46,39 +46,35 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[50],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        type: BottomNavigationBarType.fixed,
-        items: [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined),
-              title: Text('Home'),
-              backgroundColor: Colors.grey),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.list_alt_rounded),
-              title: Text('Listings'),
-              backgroundColor: Colors.grey),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.apartment),
-              title: Text('Projects'),
-              backgroundColor: Colors.grey),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.people),
-              title: Text('Realtors'),
-              backgroundColor: Colors.grey),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.dynamic_feed_rounded),
-              title: Text('Listings'),
-              backgroundColor: Colors.grey),
-        ],
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-      ),
+      bottomNavigationBar: btBar(),
       body: tabs[_currentIndex],
     );
+  }
+
+  BottomNavigationBar btBar() {
+    return BottomNavigationBar(
+      currentIndex: _currentIndex,
+      type: BottomNavigationBarType.fixed,
+      items: [
+        bottomBar("Home", Colors.grey),
+        bottomBar("Projects", Colors.grey),
+        bottomBar("Listings", Colors.grey),
+        bottomBar("Realtors", Colors.grey),
+        bottomBar("Listings", Colors.grey),
+      ],
+      onTap: (index) {
+        setState(() {
+          _currentIndex = index;
+        });
+      },
+    );
+  }
+
+  BottomNavigationBarItem bottomBar(label, colour) {
+    return BottomNavigationBarItem(
+        icon: Icon(Icons.home_outlined),
+        title: Text(label),
+        backgroundColor: colour);
   }
 }
 
