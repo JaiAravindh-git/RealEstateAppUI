@@ -19,12 +19,36 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _currentIndex = 0;
+  final tabs = [
+    Center(
+      child: Text("Home"),
+    ),
+    ListingPages(),
+    Center(
+      child: Text("projects"),
+    ),
+    Center(
+      child: Text("Realtors"),
+    ),
+    Center(
+      child: Text("Listings"),
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[50],
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.home_outlined),
@@ -47,36 +71,48 @@ class HomePage extends StatelessWidget {
               title: Text('Listings'),
               backgroundColor: Colors.grey),
         ],
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
       ),
-      body: PageView(
-        scrollDirection: Axis.vertical,
-        children: [
-          Listings(
-            img:
-                'https://mediacdn.99acres.com/media1/13921/10/278430200M-1612328313721.jpg',
-            property: 'Property1',
-            propertyname: 'Property 1 park',
-            location: 'Chennai',
-            cost: '25.5L - 35.5L',
-          ),
-          Listings(
-            img:
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHZDXGsLPahHg7Ib5aISArJBURuTOuRdlvUQ&usqp=CAU',
-            property: 'Property2',
-            propertyname: 'Property 2 park',
-            location: 'Coimbatore',
-            cost: '25.5L - 35.5L',
-          ),
-          Listings(
-            img:
-                'https://219832-668593-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2017/06/Real-Estate-scaled.jpg',
-            property: 'Property4',
-            propertyname: 'Property 3 park',
-            location: 'Salem',
-            cost: '25.5L - 35.5L',
-          ),
-        ],
-      ),
+      body: tabs[_currentIndex],
+    );
+  }
+}
+
+class ListingPages extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return PageView(
+      scrollDirection: Axis.vertical,
+      children: [
+        Listings(
+          img:
+              'https://mediacdn.99acres.com/media1/13921/10/278430200M-1612328313721.jpg',
+          property: 'Property1',
+          propertyname: 'Property 1 park',
+          location: 'Chennai',
+          cost: '25.5L - 35.5L',
+        ),
+        Listings(
+          img:
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHZDXGsLPahHg7Ib5aISArJBURuTOuRdlvUQ&usqp=CAU',
+          property: 'Property2',
+          propertyname: 'Property 2 park',
+          location: 'Coimbatore',
+          cost: '25.5L - 35.5L',
+        ),
+        Listings(
+          img:
+              'https://219832-668593-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2017/06/Real-Estate-scaled.jpg',
+          property: 'Property4',
+          propertyname: 'Property 3 park',
+          location: 'Salem',
+          cost: '25.5L - 35.5L',
+        ),
+      ],
     );
   }
 }
