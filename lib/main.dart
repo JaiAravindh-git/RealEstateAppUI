@@ -56,11 +56,31 @@ class _HomePageState extends State<HomePage> {
       currentIndex: _currentIndex,
       type: BottomNavigationBarType.fixed,
       items: [
-        bottomBar("Home", Colors.grey),
-        bottomBar("Projects", Colors.grey),
-        bottomBar("Listings", Colors.grey),
-        bottomBar("Realtors", Colors.grey),
-        bottomBar("Listings", Colors.grey),
+        bottomBar(
+          "Home",
+          Colors.grey,
+          Icon(Icons.home_outlined),
+        ),
+        bottomBar(
+          "Projects",
+          Colors.grey,
+          Icon(Icons.apartment),
+        ),
+        bottomBar(
+          "Listings",
+          Colors.grey,
+          Icon(Icons.list_alt_outlined),
+        ),
+        bottomBar(
+          "Realtors",
+          Colors.grey,
+          Icon(Icons.people_alt_sharp),
+        ),
+        bottomBar(
+          "Listings",
+          Colors.grey,
+          Icon(Icons.line_style),
+        ),
       ],
       onTap: (index) {
         setState(() {
@@ -70,11 +90,9 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  BottomNavigationBarItem bottomBar(label, colour) {
+  BottomNavigationBarItem bottomBar(label, colour, icons) {
     return BottomNavigationBarItem(
-        icon: Icon(Icons.home_outlined),
-        title: Text(label),
-        backgroundColor: colour);
+        icon: icons, title: Text(label), backgroundColor: colour);
   }
 }
 
