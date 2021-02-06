@@ -201,25 +201,6 @@ class Listings extends StatelessWidget {
                     ),
                   ],
                 )),
-                Container(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 50, 30, 0),
-                    child: Column(
-                      children: [
-                        Icon(Icons.location_city_outlined),
-                        Text("Building", style: TextStyle(fontSize: 6.0)),
-                        Icon(Icons.photo_sharp),
-                        Text("Gallery", style: TextStyle(fontSize: 6.0)),
-                        Icon(Icons.video_call),
-                        Text("Video Call", style: TextStyle(fontSize: 6.0)),
-                        Icon(Icons.maps_ugc_outlined),
-                        Text("Mesage", style: TextStyle(fontSize: 6.0)),
-                        Icon(Icons.money_outlined),
-                        Text("Properties", style: TextStyle(fontSize: 6.0)),
-                      ],
-                    ),
-                  ),
-                ),
               ],
             ),
           ),

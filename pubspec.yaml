@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.0
+  flutter_speed_dial: ^1.2.5
   nice_button: ^0.1.7
 
 dev_dependencies:

@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'listings.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 void main() => runApp(MyApp());
 
@@ -45,6 +46,32 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: SpeedDial(
+        curve: Curves.easeIn,
+        animatedIcon: AnimatedIcons.menu_close,
+        children: [
+          SpeedDialChild(
+            child: Icon(Icons.home),
+            label: "Home",
+            onTap: () {},
+          ),
+          SpeedDialChild(
+            child: Icon(Icons.location_city),
+            label: "location",
+            onTap: () {},
+          ),
+          SpeedDialChild(
+            child: Icon(Icons.list_alt_outlined),
+            label: "Listing",
+            onTap: () {},
+          ),
+          SpeedDialChild(
+            child: Icon(Icons.map_sharp),
+            label: "Maps",
+            onTap: () {},
+          ),
+        ],
+      ),
       backgroundColor: Colors.grey[50],
       bottomNavigationBar: btBar(),
       body: tabs[_currentIndex],
