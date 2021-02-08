@@ -1,8 +1,11 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:nice_button/nice_button.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'maps.dart';
 
-class Listings extends StatelessWidget {
+class Listings extends StatefulWidget {
   Listings(
       {this.img, this.propertyname, this.property, this.location, this.cost});
   String img;
@@ -10,6 +13,12 @@ class Listings extends StatelessWidget {
   String propertyname;
   String location;
   String cost;
+
+  @override
+  _ListingsState createState() => _ListingsState();
+}
+
+class _ListingsState extends State<Listings> {
   var firstColor = Color(0xff5b86e5), secondColor = Color(0xff36d1dc);
 
   @override
@@ -28,7 +37,7 @@ class Listings extends StatelessWidget {
                         child: Container(
                           height: 300.0,
                           width: 300.0,
-                          child: Image.network(img),
+                          child: Image.network(widget.img),
                         ),
                       ),
                       Padding(
@@ -37,7 +46,7 @@ class Listings extends StatelessWidget {
                           children: [
                             Icon(Icons.ac_unit_outlined),
                             Text(
-                              property,
+                              widget.property,
                               style: TextStyle(
                                   fontSize: 40.0, fontFamily: 'Roboto'),
                             ),
@@ -50,7 +59,7 @@ class Listings extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
                             Text(
-                              propertyname,
+                              widget.propertyname,
                               style: TextStyle(
                                   fontSize: 30.0, fontFamily: 'Roboto'),
                             ),
@@ -58,7 +67,7 @@ class Listings extends StatelessWidget {
                               height: 5.0,
                             ),
                             Text(
-                              location,
+                              widget.location,
                               style: TextStyle(
                                   fontFamily: 'Roboto', fontSize: 15.0),
                             ),
@@ -66,7 +75,7 @@ class Listings extends StatelessWidget {
                               height: 5.0,
                             ),
                             Text(
-                              cost,
+                              widget.cost,
                               style: TextStyle(
                                   fontSize: 30.0, fontFamily: 'Roboto'),
                             ),
@@ -203,39 +212,23 @@ class Listings extends StatelessWidget {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 5, 0),
-                  child: Container(
-                    height: 50.0,
-                    width: 50.0,
-                    child: SpeedDial(
-                      curve: Curves.easeIn,
-                      animatedIcon: AnimatedIcons.menu_close,
-                      children: [
-                        SpeedDialChild(
-                          child: Icon(Icons.home),
-                          label: "Home",
-                          onTap: () {},
-                        ),
-                        SpeedDialChild(
-                          child: Icon(Icons.location_city),
-                          label: "location",
-                          onTap: () {},
-                        ),
-                        SpeedDialChild(
-                          child: Icon(Icons.list_alt_outlined),
-                          label: "Listing",
-                          onTap: () {},
-                        ),
-                        SpeedDialChild(
-                          child: Icon(Icons.map_sharp),
-                          label: "Maps",
-                          onTap: () {},
-                        ),
-                      ],
-                    ),
+                //
+                //
+                Container(
+                  height: 50.0,
+                  width: 50.0,
+                  child: ElevatedButton(
+                    child: Text("Maps"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MapsPage()),
+                      );
+                    },
                   ),
-                ),
+                )
+                //
+                //
               ],
             ),
           ),
