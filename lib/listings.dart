@@ -147,24 +147,35 @@ class _ListingsState extends State<Listings> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(40, 40, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(50, 40, 0, 0),
                         child: Container(
                           height: 50.0,
                           width: 310.0,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12.0),
-                            color: Colors.blue.withOpacity(0.3),
+                            color: Colors.blue.withOpacity(1.0),
+                            gradient: LinearGradient(
+                                begin: Alignment.centerLeft,
+                                end: Alignment.centerRight,
+                                colors: [
+                                  Color(0xff5b86e5),
+                                  Color(0xff36d1dc),
+                                ]),
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Row(
                                 children: [
-                                  Icon(Icons.badge),
+                                  Icon(Icons.badge, color: Colors.white),
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
                                   Container(
                                     child: Text(
                                       "Exclusive",
-                                      style: TextStyle(fontSize: 17.0),
+                                      style: TextStyle(
+                                          fontSize: 17.0, color: Colors.white),
                                     ),
                                   ),
                                 ],
@@ -172,17 +183,23 @@ class _ListingsState extends State<Listings> {
                               SizedBox(
                                 child: Text(
                                   " | ",
-                                  style: TextStyle(fontSize: 17.0),
+                                  style: TextStyle(
+                                      fontSize: 17.0, color: Colors.white),
                                 ),
                                 width: 20.0,
                               ),
                               Row(
                                 children: [
-                                  Icon(Icons.location_city),
+                                  Icon(Icons.location_city,
+                                      color: Colors.white),
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
                                   Container(
                                     child: Text(
                                       "Chennai",
-                                      style: TextStyle(fontSize: 17.0),
+                                      style: TextStyle(
+                                          fontSize: 17.0, color: Colors.white),
                                     ),
                                   ),
                                 ],
@@ -190,17 +207,25 @@ class _ListingsState extends State<Listings> {
                               SizedBox(
                                 child: Text(
                                   " | ",
-                                  style: TextStyle(fontSize: 17.0),
+                                  style: TextStyle(
+                                      fontSize: 17.0, color: Colors.white),
                                 ),
                                 width: 20.0,
                               ),
                               Row(
                                 children: [
-                                  Icon(Icons.filter_sharp),
+                                  Icon(
+                                    Icons.filter_sharp,
+                                    color: Colors.white,
+                                  ),
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
                                   Container(
                                     child: Text(
                                       "Filters",
-                                      style: TextStyle(fontSize: 17.0),
+                                      style: TextStyle(
+                                          fontSize: 17.0, color: Colors.white),
                                     ),
                                   ),
                                 ],
@@ -214,19 +239,34 @@ class _ListingsState extends State<Listings> {
                 ),
                 //
                 //
-                Container(
-                  height: 50.0,
-                  width: 50.0,
-                  child: ElevatedButton(
-                    child: Text("Maps"),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => MapsPage()),
-                      );
-                    },
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 10, 400),
+                  child: Container(
+                    height: 300.0,
+                    width: 40.0,
+                    child: Column(
+                      children: [
+                        Icon(Icons.ac_unit),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Icon(Icons.location_on),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Icon(Icons.plagiarism_rounded),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Icon(Icons.picture_as_pdf_rounded),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Icon(Icons.video_call),
+                      ],
+                    ),
                   ),
-                )
+                ),
                 //
                 //
               ],
